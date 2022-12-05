@@ -17,7 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine','hbs') 
 
 app.get('/user',(req,res)=>{
-    res.render('layouts')
+    res.render('layouts/user')
 })
 
 app.get('/home',async(req,res)=>{
