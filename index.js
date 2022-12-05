@@ -21,4 +21,6 @@ app.get('/',async(req,res)=>{
     res.render('layouts/home',{data:data})
 })
 
+const PORT = 3000  || process.env.PORT
+
 app.listen(3000)
