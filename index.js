@@ -16,7 +16,7 @@ app.engine('hbs',engine({extname:'hbs',defaultLayout:'default', layoutsDir: path
 app.set('views', path.join(__dirname, 'views'));    
 app.set('view engine','hbs') 
 
-app.get('/',async(req,res)=>{
+app.get('/home',async(req,res)=>{
     let data = await db.get().collection('userinfo').findOne({name:"akhil U Nair"})
     res.render('layouts/home',{data:data})
 })
