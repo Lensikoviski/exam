@@ -23,4 +23,4 @@ app.get('/',async(req,res)=>{
 
 const PORT = 3000  || process.env.PORT
 
-app.listen(3000)
+app.listen(PORT)
