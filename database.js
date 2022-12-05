@@ -1,5 +1,5 @@
 const mongoclient = require("mongodb").MongoClient
-const url = MONGODB_URI
+const url = process.env.MONGODB_URI
 const state = {
     db:null
 }
