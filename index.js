@@ -21,8 +21,15 @@ app.get('/user',(req,res)=>{
 })
 
 app.get('/home',async(req,res)=>{
-    let data = await db.get().collection('userinfo').findOne({name:"akhil U Nair"})
-    res.render('layouts/home',{data:data})
+    await db.get().collection('userinfo').findOne({name:"akhil U Nair"}).then((data)=>{
+        if(data){
+            res.render('layouts/home',{data:data})
+        }
+    }).catch((err)=>{
+        res.send("An error occured")
+        console.log(err)
+    })
+   
 })
 
 const PORT = 3000  || process.env.PORT
