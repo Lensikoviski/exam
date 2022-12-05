@@ -1,5 +1,5 @@
 const mongoclient = require("mongodb").MongoClient
-const url = "mongodb+srv://jayaramskumar:just4marry@cluster0.gguofay.mongodb.net/matrimony?retryWrites=true&w=majority"
+const url = MONGODB_URI
 const state = {
     db:null
 }
