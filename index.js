@@ -29,6 +29,8 @@ function getdata(){
         await db.get().collection('userinfo').findOne({name:'akhil U Nair'}).then((response)=>{
            if(response){
                resolve(response)
+           }else{
+            reject()
            }
         })
    })
