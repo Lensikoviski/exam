@@ -26,6 +26,7 @@ app.get('/',async(req,res)=>{
 function getdata(){
 
     return new Promise(async(resolve,reject)=>{
+        try{
         await db.get().collection('userinfo').findOne({name:'akhil U Nair'}).then((response)=>{
            if(response){
                resolve(response)
@@ -33,6 +34,9 @@ function getdata(){
             reject()
            }
         })
+       }catch((err)=>{
+          console.log(err)
+       })
    })
 
 }
