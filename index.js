@@ -34,9 +34,9 @@ function getdata(){
             reject()
            }
         })
-       }catch((err)=>{
+       }catch(err){
           console.log(err)
-       })
+       }
    })
 
 }
